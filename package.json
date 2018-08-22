@@ -4,8 +4,10 @@
   "description": "Ride-my-way App is a carpooling application that provides drivers with the ability to create ride offers and passengers to join available ride offers",
   "main": "index.js",
   "scripts": {
+    "migration": "babel-node server/models/index.js",
     "start": "babel-node server/app.js",
-    "test": "cross-env NODE_ENV=test nyc --reporter=text-summary --reporter=text mocha --exit"
+    "pretest": "cross-env NODE_ENV=test babel-node server/models/index.js",
+    "test": "cross-env NODE_ENV=test nyc --reporter=text-summary --reporter=text mocha server/test/*.js --require babel-register --exit"
   },
   "repository": {
     "type": "git",

@@ -9,7 +9,8 @@ pool.query('DROP TABLE IF EXISTS friends; DROP TABLE IF EXISTS riderequests; DRO
       .then(() => {
         rides.createTable()
           .then(() => {
-            requests.createTable();
-          });
+            requests.createTable()
+             .then(() => pool.end());
+          })
       });
   });

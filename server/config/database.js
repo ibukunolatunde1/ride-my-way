@@ -1,4 +1,4 @@
-import { Pool } from 'pg';
+import { Client } from 'pg';
 import dotenv from 'dotenv';
 import config from './config';
 
@@ -9,11 +9,11 @@ const connection = config[env];
 
 let poolConfig;
 if (connection.production_connection) {
-  poolConfig = new Pool({
+  poolConfig = new Client({
     connectionString: process.env[connection.production_connection],
   });
 } else {
-  poolConfig = new Pool(connection);
+  poolConfig = new Client(connection);
 }
 
 const pool = poolConfig;
