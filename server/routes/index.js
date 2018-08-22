@@ -1,4 +1,9 @@
 import express from 'express';
+import auth from '../middleware/auth';
+import { userSignUpValidator, userSignInValidator, rideOfferValidator } from '../middleware/validate';
+import { signUp, logIn } from '../controller/userController';
+import { createRide, getAllRides, getRideAtId } from '../controller/rideOfferController';
+import { getRequests, createRequest, verifyRequest } from '../controller/rideRequestController';
 
 const router = express.Router();
 
