@@ -4,7 +4,7 @@
   "description": "Ride-my-way App is a carpooling application that provides drivers with the ability to create ride offers and passengers to join available ride offers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env NODE_ENV=test nyc --reporter=text-summary --reporter=text mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -31,10 +31,12 @@
     "babel-preset-env": "^1.7.0",
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
+    "coveralls": "^3.0.2",
     "cross-env": "^5.2.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
     "mocha": "^5.2.0",
+    "mocha-lcov-reporter": "^1.3.0",
     "nyc": "^12.0.2"
   }
 }

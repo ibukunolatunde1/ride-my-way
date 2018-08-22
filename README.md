@@ -1,6 +1,7 @@
 # ride-my-way
 Ride-my-way App is a carpooling application that provides drivers with the ability to create ride offers and passengers to join available ride offers
-
+[![Build Status](https://travis-ci.com/ibukunolatunde1/ride-my-way.svg?branch=develop)](https://travis-ci.com/ibukunolatunde1/ride-my-way)
+[![Coverage Status](https://coveralls.io/repos/github/ibukunolatunde1/ride-my-way/badge.svg?branch=develop)](https://coveralls.io/github/ibukunolatunde1/ride-my-way?branch=develop)
 ## Features
 * [x] Users can create an account and log in.
 * [X] Drivers can add ride offers.
